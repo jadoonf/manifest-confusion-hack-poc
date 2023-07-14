@@ -1,0 +1,18 @@
+{
+  "name": "manifest-hack-poc",
+  "version": "1.0.0",
+  "description": "A PoC for manifest confusion (for testing purposes)",
+  "main": "index.js",
+  "keywords": [
+    "manifest-confusion",
+    "exploit",
+    "poc"
+  ],
+  "author": "Research @listen.dev",
+  "license": "ISC",
+  "dependencies": {
+    "libnpmpack": "^5.0.18",
+    "npm-registry-fetch": "^14.0.5",
+    "ssri": "^10.0.4"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "very-bad-pkg",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": ["manifest-confusion", "exploit", "poc"],
+  "description": "A PoC for manifest confusion (for testing purposes)",
+  "scripts": {
+    "test": "echo \"This pkg seems OK!\" && exit 1"
+  },
+  "author": "Research @listen.dev",
+  "license": "ISC"
+}
