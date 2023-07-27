@@ -11,7 +11,8 @@
   "author": "Research @listen.dev",
   "license": "ISC",
   "dependencies": {
-    "libnpmpack": "^5.0.18",
+    "axios": "^1.4.0",
+    "libnpmpack": "^5.0.19",
     "npm-registry-fetch": "^14.0.5",
     "ssri": "^10.0.4"
   }
