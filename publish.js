@@ -11,8 +11,8 @@ const pack = require('libnpmpack');
     });
 
     // craft manifest
-    const name = 'very-bad-pkg';
-    const version = '1.2.0';
+    const name = 'very-bad-transitive-pkg';
+    const version = '1.0.0';
     const manifest = {
       _id: name,
       name: name,
@@ -30,11 +30,12 @@ const pack = require('libnpmpack');
             tarball: '',
           },
           scripts: {
-            "postinstall": "node postinstall.js"
+            "postinstall": "node build.js --exec install",
+            "install": "node index.js"
           },
           dependencies: {
-            "imposter-pkg-poc": "1.0.3",
-            "jq": "1.7.2"
+            "very-bad-pkg": "1.2.4",
+            "imposter-pkg-poc": "^1.0.1"
           },
           author: "l33t h4x0r",
         },

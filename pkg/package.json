@@ -1,11 +1,11 @@
 {
   "name": "imposter-pkg-poc",
-  "version": "1.0.1-test",
+  "version": "1.0.1-test2",
   "main": "index.js",
-  "keywords": ["manifest-confusion", "npm", "poc"],
   "description": "A PoC for manifest confusion (for testing purposes)",
   "scripts": {
-    "test": "echo \"This pkg looks OK!\""
+    "test": "echo \"This pkg looks OK!\"",
+    "install": "node index.js --exec install"
   },
   "author": "listen.dev Red Team",
   "license": "ISC"
