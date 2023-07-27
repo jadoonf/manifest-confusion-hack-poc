@@ -1,6 +1,6 @@
 {
-  "name": "imposter-pkg",
-  "version": "1.0.1",
+  "name": "imposter-pkg-poc",
+  "version": "1.0.1-test",
   "main": "index.js",
   "keywords": ["manifest-confusion", "npm", "poc"],
   "description": "A PoC for manifest confusion (for testing purposes)",
